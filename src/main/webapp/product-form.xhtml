@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html" 
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="layout.xhtml">
+	<ui:define name="content">
+		<h:form id="productForm">
+			<p:panel header="Product Details">
+				<h:panelGrid columns="1">
+					<p:outputLabel for="name" value="Name: " />
+					<p:inputText id="name" value="#{productController.product.name}" />
+					<p:outputLabel for="price" value="Price: " />
+					<p:inputNumber id="price"
+						value="#{productController.product.price}" />
+					<h:commandButton value="Save" action="#{productController.save}" />
+				</h:panelGrid>
+			</p:panel>
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>

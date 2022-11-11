@@ -1,2 +1,2 @@
-# booking
-Booking System: studying JSF, JPA, Spring and Maven
+# products
+Product CRUD: studying JSF, JPA, Spring and Maven
